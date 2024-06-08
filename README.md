@@ -14,7 +14,7 @@ Can also be used to route other Docker containers through the NordVPN tunnel. Se
 [![Docker image size][dockerhub-size]][dockerhub-link]
 [![GitHub build][github-build]][github-link]
 [![GitHub last commit][github-lastcommit]][github-link]
-<!-- [![GitHub release date][github-releasedate]][github-link] -->
+[![GitHub release date][github-releasedate]][github-link]
 
 <!-- ## What is OpenVPN?
 
