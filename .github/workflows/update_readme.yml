@@ -10,7 +10,7 @@ jobs:
     name: Update NordVPN cities list
     runs-on: ubuntu-latest
     env:
-      FILE: "/resources/CITIES.md"
+      FILE: "CITIES.md"
     steps:
       - name: Checkout
         uses: actions/checkout@v4.1.6
