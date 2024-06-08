@@ -10,10 +10,10 @@ Based on the implementation from - https://github.com/azinchen/nordvpn⁠ - Than
 Can also be used to route other Docker containers through the NordVPN tunnel. See - https://github.com/azinchen/nordvpn for instructions.
 
 ## Status
+[![GitHub latest version][github-latestversion]][github-releases]
 [![Docker pulls][dockerhub-pulls]][dockerhub-link]
 [![Docker image size][dockerhub-size]][dockerhub-link]
 [![GitHub build][github-build]][github-link]
-[![GitHub latest version][github-latestversion]][github-releases]
 [![GitHub last commit][github-lastcommit]][github-link]
 [![GitHub release date][github-releasedate]][github-link]
 
