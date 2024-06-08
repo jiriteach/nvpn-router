@@ -1,8 +1,9 @@
 name: Update NordVPN readme files
 
 on:
-  schedule:
-    - cron: 0 3 * * *
+  #schedule:
+  #  - cron: 0 3 * * *
+  workflow_dispatch
 
 jobs:
   update_cities:
