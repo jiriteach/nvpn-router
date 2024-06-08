@@ -13,6 +13,7 @@ Can also be used to route other Docker containers through the NordVPN tunnel. Se
 [![Docker pulls][dockerhub-pulls]][dockerhub-link]
 [![Docker image size][dockerhub-size]][dockerhub-link]
 [![GitHub build][github-build]][github-link]
+[![GitHub latest version][github-latestversion]][github-releases]
 [![GitHub last commit][github-lastcommit]][github-link]
 [![GitHub release date][github-releasedate]][github-link]
 
@@ -141,6 +142,8 @@ By the fault the container will try to reconnect to the same server when disconn
 [github-lastcommit]: https://img.shields.io/github/last-commit/jiriteach/nvpn-router
 [github-link]: https://github.com/jiriteach/nvpn-router
 [github-issues]: https://github.com/jiriteach/nvpn-router/issues
+[github-releases]: https://github.com/jiriteach/nvpn-router/releases
 [github-build]: https://img.shields.io/github/actions/workflow/status/jiriteach/nvpn-router/deploy.yml?branch=master
 [github-releasedate]: https://img.shields.io/github/release-date/jiriteach/nvpn-router
+[github-latestversion]: https://img.shields.io/github/v/release/jiriteach/nvpn-router
 [email-link]: mailto:jxs@s7n.dev
