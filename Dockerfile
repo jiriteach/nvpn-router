@@ -5,15 +5,15 @@ ENV PACKAGE="just-containers/s6-overlay"
 ENV PACKAGEVERSION="3.1.6.2"
 ARG TARGETPLATFORM
 
-RUN echo "**** install security fix packages ****" && \
-    echo "**** install mandatory packages ****" && \
+RUN echo "**** Install security fix packages ****" && \
+    echo "**** Install mandatory packages ****" && \
     apk --no-cache --no-progress add \
         tar=1.35-r2 \
-        xz=5.4.5-r0 \
+        xz=5.6.1-r3 \
         && \
-    echo "**** create folders ****" && \
+    echo "**** Create required folders ****" && \
     mkdir -p /s6 && \
-    echo "**** download ${PACKAGE} ****" && \
+    echo "**** Download ${PACKAGE} ****" && \
     PACKAGEPLATFORM=$(case ${TARGETPLATFORM} in \
         "linux/amd64")    echo "x86_64"   ;; \
         "linux/386")      echo "i486"     ;; \
@@ -30,8 +30,8 @@ RUN echo "**** install security fix packages ****" && \
 # rootfs builder
 FROM alpine:3.20.0 AS rootfs-builder
 
-RUN echo "**** install security fix packages ****" && \
-    echo "**** end run statement ****"
+RUN echo "**** Install security fix packages ****" && \
+    echo "**** End run statement ****"
 
 COPY root/ /rootfs/
 RUN chmod +x /rootfs/usr/bin/*
@@ -41,7 +41,7 @@ COPY --from=s6-builder /s6/ /rootfs/
 # Main image
 FROM alpine:3.20.0
 
-LABEL maintainer="Alexander Zinchenko <alexander@zinchenko.com>"
+LABEL maintainer="Jithen Singh <jxs@s7n.dev>"
 
 ENV TECHNOLOGY=openvpn_udp \
     RANDOM_TOP=0 \
@@ -49,26 +49,28 @@ ENV TECHNOLOGY=openvpn_udp \
     CHECK_CONNECTION_ATTEMPT_INTERVAL=10 \
     S6_CMD_WAIT_FOR_SERVICES_MAXTIME=120000
 
-RUN echo "**** install security fix packages ****" && \
-    echo "**** install mandatory packages ****" && \
+RUN echo "**** Install security fix packages ****" && \
+    echo "**** Install mandatory packages ****" && \
     apk --no-cache --no-progress add \
-        bash=5.2.21-r0 \
-        curl=8.5.0-r0 \
+        dnsmasq \
+        openrc \
+        bash=5.2.26-r0 \
+        curl=8.7.1-r0 \
         iptables=1.8.10-r3 \
         ip6tables=1.8.10-r3 \
         jq=1.7.1-r0 \
-        shadow=4.14.2-r0 \
-        shadow-login=4.14.2-r0 \
-        openvpn=2.6.8-r0 \
-        bind-tools=9.18.24-r1 \
+        shadow=4.15.1-r0 \
+        shadow-login=4.15.1-r0 \
+        openvpn=2.6.10-r0 \
+        bind-tools=9.18.27-r0 \
         && \
-    echo "**** create process user ****" && \
+    echo "**** Create process user ****" && \
     addgroup --system --gid 912 nordvpn && \
     adduser --system --uid 912 --disabled-password --no-create-home --ingroup nordvpn nordvpn && \
-    echo "**** cleanup ****" && \
+    echo "**** Cleanup ****" && \
     rm -rf /tmp/* && \
     rm -rf /var/cache/apk/*
 
 COPY --from=rootfs-builder /rootfs/ /
 
-ENTRYPOINT ["/init"]
+ ENTRYPOINT ["/init"]
