@@ -9,6 +9,13 @@ Based on the implementation from - https://github.com/azinchen/nordvpn⁠ - Than
 
 Can also be used to route other Docker containers through the NordVPN tunnel. See - https://github.com/azinchen/nordvpn for instructions.
 
+## Status
+[![Docker pulls][dockerhub-pulls]][dockerhub-link]
+[![Docker image size][dockerhub-size]][dockerhub-link]
+[![GitHub build][github-build]][github-link]
+[![GitHub last commit][github-lastcommit]][github-link]
+<!-- [![GitHub release date][github-releasedate]][github-link] -->
+
 <!-- ## What is OpenVPN?
 
 OpenVPN is an open-source software application that implements virtual private network (VPN) techniques for creating secure point-to-point or site-to-site connections in routed or bridged configurations and remote access facilities. It uses a custom security protocol that utilizes SSL/TLS for key exchange. It is capable of traversing network address translators (NATs) and firewalls. -->
@@ -126,3 +133,14 @@ By the fault the container will try to reconnect to the same server when disconn
 * `NETWORK6`          - CIDR IPv6 network (fe00:d34d:b33f::/64), add a route to allows replies once the VPN is up. Several networks can be added to route using semicolon.
 * `OPENVPN_OPTS`      - Used to pass extra parameters to openvpn.
 * `DEBUG`             - info, trace or trace+. Set to 'trace' for troubleshooting, 'trace+' will log your User and Pass.
+
+[dockerhub-badge]: https://img.shields.io/docker/pulls/jiriteach/nvpn-router?style=flat-square
+[dockerhub-link]: https://hub.docker.com/repository/docker/jiriteach/nvpn-router
+[dockerhub-pulls]: https://img.shields.io/docker/pulls/jiriteach/nvpn-router
+[dockerhub-size]: https://img.shields.io/docker/image-size/jiriteach/nvpn-router/master
+[github-lastcommit]: https://img.shields.io/github/last-commit/jiriteach/nvpn-router
+[github-link]: https://github.com/jiriteach/nvpn-router
+[github-issues]: https://github.com/jiriteach/nvpn-router/issues
+[github-build]: https://img.shields.io/github/actions/workflow/status/jiriteach/nvpn-router/deploy.yml?branch=master
+[github-releasedate]: https://img.shields.io/github/release-date/jiriteach/nvpn-router
+[email-link]: mailto:jxs@s7n.dev
