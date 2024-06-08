@@ -53,7 +53,7 @@ jobs:
     name: Update NordVPN countries list
     runs-on: ubuntu-latest
     env:
-      FILE: "/resources/COUNTRIES.md"
+      FILE: "COUNTRIES.md"
     steps:
       - name: Checkout
         uses: actions/checkout@v4.1.6
@@ -96,7 +96,7 @@ jobs:
     name: Update NordVPN VPN server groups
     runs-on: ubuntu-latest
     env:
-      FILE: "/resources/GROUPS.md"
+      FILE: "GROUPS.md"
     steps:
       - name: Checkout
         uses: actions/checkout@v4.1.6
@@ -139,7 +139,7 @@ jobs:
     name: Update NordVPN VPN technologies
     runs-on: ubuntu-latest
     env:
-      FILE: "/resources/TECHNOLOGIES.md"
+      FILE: "TECHNOLOGIES.md"
     steps:
       - name: Checkout
         uses: actions/checkout@v4.1.6
