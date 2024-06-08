@@ -11,10 +11,10 @@ Can also be used to route other Docker containers through the NordVPN tunnel. Se
 
 ## Status
 [![GitHub latest version][github-latestversion]][github-releases]
-[![Docker pulls][dockerhub-pulls]][dockerhub-link]
-[![Docker image size][dockerhub-size]][dockerhub-link]
-[![GitHub build][github-build]][github-link]
 [![GitHub last commit][github-lastcommit]][github-link]
+[![GitHub build][github-build]][github-link]
+[![Docker image size][dockerhub-size]][dockerhub-link]
+[![Docker pulls][dockerhub-pulls]][dockerhub-link]
 [![GitHub release date][github-releasedate]][github-link]
 
 <!-- ## What is OpenVPN?
