@@ -13,7 +13,7 @@
 Docker container designed to allow LAN devices to be routed through via an active NordVPN tunnel. This container acts as a gateway with DNS resolution via NordVPN. 
 A NordVPN tunnel is established on container start-up based on specified environment variables. Uses OpenVPN to establish the NordVPN tunnel.
 
-Based on the implementation from - https://github.com/azinchen/nordvpn⁠ - Thanks
+Based on the implementation from - https://github.com/azinchen/nordvpn⁠ - Thanks!
 
 Can also be used to route other Docker containers through the NordVPN tunnel. See - https://github.com/azinchen/nordvpn for instructions.
 
@@ -96,7 +96,7 @@ Once the container is started, several checks can be run to ensure its working a
 
 LAN devices can now be easily setup to route through the container. Set the `default gw` and `dns` of the device to point to the IP address of the container then run the same checks as above. The device should be routing through the container. Depedendant on LAN setup - the existing LAN DHCP could be setup to automatically provide the `default gw` and `dns` of the container.
 
-## Additional sonfiguration
+## Additional configuration
   
 ### Filtering NordVPN servers
 
@@ -127,10 +127,10 @@ By the fault the container will try to reconnect to the same server when disconn
 * `CHECK_CONNECTION_URL` - Use list of URI for checking Internet connection.
 * `CHECK_CONNECTION_ATTEMPTS` - Set number of attemps of checking. Default value is 5.
 * `CHECK_CONNECTION_ATTEMPT_INTERVAL` - Set sleep timeouts between failed attepms. Default value is 10.
-* `USER`              - User for NordVPN account.
-* `PASS`              - Password for NordVPN account.
+* `USER`              - NordVPN service credential username for manual setups.
+* `PASS`              - NordVPN service credential password for manual setups.
 * `WHITELIST`         - List of domains that are going to be accessible outside vpn.
-* `NETWORK`           - CIDR network (IE 192.168.1.0/24), add a route to allows replies once the VPN is up. Several networks can be added to route using semicolon.
-* `NETWORK6`          - CIDR IPv6 network (IE fe00:d34d:b33f::/64), add a route to allows replies once the VPN is up. Several networks can be added to route using semicolon.
-* `OPENVPN_OPTS`      - Used to pass extra parameters to openvpn [full list](https://openvpn.net/community-resources/reference-manual-for-openvpn-2-4/).
+* `NETWORK`           - CIDR network (192.168.1.0/24), add a route to allows replies once the VPN is up. Several networks can be added to route using semicolon.
+* `NETWORK6`          - CIDR IPv6 network (fe00:d34d:b33f::/64), add a route to allows replies once the VPN is up. Several networks can be added to route using semicolon.
+* `OPENVPN_OPTS`      - Used to pass extra parameters to openvpn.
 * `DEBUG`             - info, trace or trace+. Set to 'trace' for troubleshooting, 'trace+' will log your User and Pass.
