@@ -14,18 +14,6 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4.1.6
 
-      - name: Docker meta
-        id: meta
-        uses: docker/metadata-action@v3
-        with:
-          images: |
-            ghcr.io/${{ github.repository_owner }}/nvpn-router
-          tags: |
-            type=raw,value=1.0.${{ github.run_number }},priority=1000
-            type=ref,event=branch
-            type=sha
-            type=raw,value=latest
-
       - name: Get branch name
         id: git
         shell: bash
@@ -85,10 +73,8 @@ jobs:
           platforms: ${{ env.PLATFORMS }}
           push: true
           tags: |
-            # ${{ github.repository }}:latest
-            # ghcr.io/${{ github.repository }}:latest
-            ${{ steps.meta.outputs.tags }}
-          labels: ${{ steps.meta.outputs.labels }}
+            ${{ github.repository }}:latest
+            ghcr.io/${{ github.repository }}:latest
 
       - name: Run Snyk to check Docker image for vulnerabilities
         continue-on-error: true
