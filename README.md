@@ -2,14 +2,6 @@
 
 # NordVPN Router - Docker Container
 
-<!-- 
-[![Docker pulls][dockerhub-pulls]][dockerhub-link]
-[![Docker image size][dockerhub-size]][dockerhub-link]
-[![GitHub release date][github-releasedate]][github-link]
-[![GitHub build][github-build]][github-link]
-[![GitHub last commit][github-lastcommit]][github-link] 
--->
-
 Docker container designed to allow LAN devices to be routed through via an active NordVPN tunnel. This container acts as a gateway with DNS resolution via NordVPN. 
 A NordVPN tunnel is established on container start-up based on specified environment variables. Uses OpenVPN to establish the NordVPN tunnel.
 
