@@ -1,9 +1,9 @@
 name: Snyk Analysis
 
 on:
-  schedule:
+  #schedule:
     #- cron: 0 4 * * *
-    workflow_dispatch
+  workflow_dispatch
 
 jobs:
   snyk:
