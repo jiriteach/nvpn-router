@@ -1,8 +1,9 @@
 name: Update GitHub package versions
 
 on:
-  schedule:
-    - cron: 0 3 * * *
+  #schedule:
+  #  - cron: 0 3 * * *
+  workflow_dispatch
 
 jobs:
   update_github_releases:
