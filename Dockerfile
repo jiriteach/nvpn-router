@@ -52,6 +52,7 @@ ENV TECHNOLOGY=openvpn_udp \
 RUN echo "**** Install security fix packages ****" && \
     echo "**** Install mandatory packages ****" && \
     apk --no-cache --no-progress add \
+        traceroute \
         dnsmasq \
         openrc \
         bash=5.2.26-r0 \
