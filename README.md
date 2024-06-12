@@ -1,4 +1,4 @@
-<img src="https://www.slashgear.com/img/gallery/how-to-cancel-your-nordvpn-subscription/intro-1712946104.jpg" width="150">
+<img src="https://www.slashgear.com/img/gallery/how-to-cancel-your-nordvpn-subscription/intro-1712946104.jpg" width="180">
 
 # NordVPN Router - Docker Container
 
