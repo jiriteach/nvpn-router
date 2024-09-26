@@ -13,7 +13,7 @@ jobs:
       FILE: "CITIES.md"
     steps:
       - name: Checkout
-        uses: actions/checkout@v4.1.7
+        uses: actions/checkout@v4.2.0
 
       - name: Update ${{ env.FILE }}
         id: createfile
@@ -56,7 +56,7 @@ jobs:
       FILE: "COUNTRIES.md"
     steps:
       - name: Checkout
-        uses: actions/checkout@v4.1.7
+        uses: actions/checkout@v4.2.0
 
       - name: Update ${{ env.FILE }}
         id: createfile
@@ -99,7 +99,7 @@ jobs:
       FILE: "GROUPS.md"
     steps:
       - name: Checkout
-        uses: actions/checkout@v4.1.7
+        uses: actions/checkout@v4.2.0
 
       - name: Update ${{ env.FILE }}
         id: createfile
@@ -142,7 +142,7 @@ jobs:
       FILE: "TECHNOLOGIES.md"
     steps:
       - name: Checkout
-        uses: actions/checkout@v4.1.7
+        uses: actions/checkout@v4.2.0
 
       - name: Update ${{ env.FILE }}
         id: createfile
